@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Downloader - Free, Unlimited, No Ads</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬇️</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <h1>TikTok Downloader</h1>
+            </div>
+            <div class="tagline">
+                <span class="badge"><i class="fas fa-infinity"></i> Unlimited Downloads</span>
+                <span class="badge"><i class="fas fa-ban"></i> No Ads</span>
+                <span class="badge"><i class="fas fa-bolt"></i> Super Fast</span>
+                <span class="badge"><i class="fas fa-mobile-alt"></i> All Devices</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Download TikTok Videos & Audio <span class="highlight">in One Click</span></h2>
+                <p class="subtitle">HD Video (MP4) and High-Quality Audio (MP3) - Completely Free</p>
+                
+                <!-- Download Box -->
+                <div class="download-box">
+                    <div class="input-group">
+                        <input type="text" id="videoUrl" placeholder="Paste TikTok video link here... Example: https://www.tiktok.com/@user/video/123456" autocomplete="off" autofocus>
+                        <button id="downloadBtn" class="btn-primary">
+                            <i class="fas fa-download"></i> Start Download
+                        </button>
+                    </div>
+                    <div class="format-options">
+                        <label class="format-option active" data-format="mp4">
+                            <i class="fas fa-video"></i> HD Video (MP4)
+                        </label>
+                        <label class="format-option" data-format="mp3">
+                            <i class="fas fa-music"></i> Audio (MP3)
+                        </label>
+                    </div>
+                    
+                    <!-- Quick Test Links -->
+                    <div class="quick-test">
+                        <p><i class="fas fa-vial"></i> Quick Test (Click to try):</p>
+                        <div class="test-buttons">
+                            <button class="test-btn" data-url="https://www.tiktok.com/@tiktok/video/7324356767578967302">Test 1</button>
+                            <button class="test-btn" data-url="https://vm.tiktok.com/ZMJwCr5gT/">Test 2</button>
+                            <button class="test-btn" data-url="https://www.tiktok.com/@example/video/1234567890123456789">Test 3</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="instructions">
+                    <h3><i class="fas fa-info-circle"></i> How to Use:</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p>Open TikTok app and tap "Share" on any video</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p>Select "Copy Link" option</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p>Paste the link above and download</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Preview Area -->
+    <section class="preview-section">
+        <div class="container">
+            <div id="previewArea" class="preview-area hidden">
+                <h3><i class="fas fa-film"></i> Video Preview</h3>
+                <div class="video-info">
+                    <div class="thumbnail-container">
+                        <img id="thumbnail" src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?w=400&h=225&fit=crop&auto=format" alt="Thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="info-details">
+                        <h4 id="videoTitle">Your TikTok Video</h4>
+                        <div class="meta-info">
+                            <span><i class="fas fa-user"></i> <span id="author">@username</span></span>
+                            <span><i class="fas fa-clock"></i> <span id="duration">0:00</span></span>
+                            <span><i class="fas fa-heart"></i> <span id="likes">0</span></span>
+                        </div>
+                        <div class="download-buttons">
+                            <button id="downloadMP4" class="btn-download mp4">
+                                <i class="fas fa-video"></i> Download MP4 (HD)
+                            </button>
+                            <button id="downloadMP3" class="btn-download mp3">
+                                <i class="fas fa-music"></i> Download MP3
+                            </button>
+                        </div>
+                        <p class="download-hint">
+                            <i class="fas fa-lightbulb"></i> If download doesn't start, right-click and choose "Save Link As"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2><i class="fas fa-star"></i> Why Use Our Downloader?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Unlimited Downloads</h3>
+                    <p>Download as many videos as you want. No limits, no restrictions!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>100% Ad-Free</h3>
+                    <p>No pop-ups, no banners, no annoying ads. Just download!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Super Fast</h3>
+                    <p>HD video downloads in seconds. No waiting!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Private</h3>
+                    <p>Your data is secure. We don't collect or store any information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Download Methods -->
+    <section class="alternatives">
+        <div class="container">
+            <h2><i class="fas fa-backup"></i> Alternative Download Options</h2>
+            <div class="alt-methods">
+                <div class="alt-card">
+                    <h3><i class="fas fa-external-link-alt"></i> Direct Downloaders</h3>
+                    <p>If the above method doesn't work, click these buttons:</p>
+                    <div class="alt-buttons">
+                        <button class="alt-btn" id="alt1">SnapTik.app</button>
+                        <button class="alt-btn" id="alt2">SSSTik.io</button>
+                        <button class="alt-btn" id="alt3">TikDown.org</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Is there any download limit?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No!</strong> Our service has no download limits. You can download 100+ videos daily, completely free.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What video quality will I get?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide maximum quality (HD 720p/1080p). Videos download in original size without compression.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is it safe to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, completely safe. We don't collect data, no malware. Everything works in your browser.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does it work on mobile?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Works on iOS (iPhone) and Android devices. Just open browser and paste the link.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fab fa-tiktok"></i>
+                    <h3>TikTok Downloader</h3>
+                    <p>The easiest and fastest TikTok downloader</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="#features"><i class="fas fa-star"></i> Features</a>
+                    <a href="#faq"><i class="fas fa-question"></i> FAQ</a>
+                </div>
+                <div class="footer-disclaimer">
+                    <p><strong><i class="fas fa-exclamation-triangle"></i> Note:</strong> This tool is for <strong>personal use only</strong>. Do not redistribute downloaded content or use for commercial purposes. We are not affiliated with TikTok.</p>
+                    <p class="copyright">© 2024 TikTok Downloader. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff0050;"></i> for users worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="loading-spinner"></div>
+            <h3>Preparing Download...</h3>
+            <p id="loadingText">Please wait, processing your video</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Ready Modal -->
+    <div id="downloadModal" class="modal hidden">
+        <div class="modal-content download-ready">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Download Ready!</h3>
+            <p id="downloadMessage">Your file download will start automatically. If it doesn't:</p>
+            <div class="download-instructions">
+                <p><i class="fas fa-mouse-pointer"></i> <strong>Right-click</strong> on the download button</p>
+                <p><i class="fas fa-save"></i> Select "<strong>Save Link As</strong>"</p>
+                <p><i class="fas fa-folder"></i> Choose where to save the file</p>
+            </div>
+            <div class="modal-buttons">
+                <button id="directDownload" class="btn-primary">
+                    <i class="fas fa-download"></i> Direct Download
+                </button>
+                <button id="closeModal" class="btn-secondary">
+                    <i class="fas fa-times"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
