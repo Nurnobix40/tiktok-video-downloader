@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Downloader - Free, Unlimited, No Ads</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TikTok Downloader X40 - Download Videos & Audio Without Watermark</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬇️</text></svg>">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="TikTok Downloader X40 - Download Videos & Extract Audio without watermark. HD MP4 videos and MP3 audio. No ads, unlimited downloads.">
+    <meta name="keywords" content="tiktok downloader x40, download tiktok videos, tiktok video download, tiktok mp4, tiktok mp3, tiktok without watermark">
+    <meta name="author" content="TikTok Downloader X40">
+    <meta property="og:title" content="TikTok Downloader X40 - Videos & Audio Without Watermark">
+    <meta property="og:description" content="Download TikTok videos and extract audio without watermark. Free, unlimited, no registration.">
+    <meta property="og:url" content="https://nurnobix40.github.io/tiktok-video-downloader/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TikTok Downloader X40">
+    <meta name="twitter:description" content="Download TikTok videos & audio without watermark">
 </head>
 <body>
     <!-- Header -->
@@ -14,13 +26,13 @@
         <div class="container">
             <div class="logo">
                 <i class="fab fa-tiktok"></i>
-                <h1>TikTok Downloader</h1>
+                <h1>TikTok Downloader X40</h1>
             </div>
             <div class="tagline">
-                <span class="badge"><i class="fas fa-infinity"></i> Unlimited Downloads</span>
+                <span class="badge"><i class="fas fa-infinity"></i> Unlimited</span>
                 <span class="badge"><i class="fas fa-ban"></i> No Ads</span>
-                <span class="badge"><i class="fas fa-bolt"></i> Super Fast</span>
-                <span class="badge"><i class="fas fa-mobile-alt"></i> All Devices</span>
+                <span class="badge"><i class="fas fa-bolt"></i> Fast</span>
+                <span class="badge"><i class="fas fa-shield-alt"></i> Secure</span>
             </div>
         </div>
     </header>
@@ -29,33 +41,75 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Download TikTok Videos & Audio <span class="highlight">in One Click</span></h2>
-                <p class="subtitle">HD Video (MP4) and High-Quality Audio (MP3) - Completely Free</p>
+                <h2>Download TikTok <span class="highlight">Videos & Audio</span> Without Watermark</h2>
+                <p class="subtitle">HD Videos (MP4) & High-Quality Audio (MP3) - 100% Free</p>
                 
                 <!-- Download Box -->
                 <div class="download-box">
                     <div class="input-group">
-                        <input type="text" id="videoUrl" placeholder="Paste TikTok video link here... Example: https://www.tiktok.com/@user/video/123456" autocomplete="off" autofocus>
-                        <button id="downloadBtn" class="btn-primary">
-                            <i class="fas fa-download"></i> Start Download
+                        <div class="input-with-buttons">
+                            <input type="text" id="videoUrl" placeholder="Paste TikTok video link here..." autocomplete="off">
+                            <div class="input-buttons">
+                                <button id="pasteBtn" class="input-btn" title="Paste from clipboard">
+                                    <i class="fas fa-paste"></i> Paste
+                                </button>
+                                <button id="clearBtn" class="input-btn clear" title="Clear text">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button id="analyzeBtn" class="btn-primary">
+                            <i class="fas fa-search"></i> Analyze Link
                         </button>
                     </div>
+                    
+                    <!-- Format Options -->
                     <div class="format-options">
-                        <label class="format-option active" data-format="mp4">
-                            <i class="fas fa-video"></i> HD Video (MP4)
-                        </label>
-                        <label class="format-option" data-format="mp3">
-                            <i class="fas fa-music"></i> Audio (MP3)
-                        </label>
+                        <h3 class="format-title"><i class="fas fa-download"></i> Download Options:</h3>
+                        <div class="format-grid">
+                            <label class="format-option video active" data-format="mp4" data-type="video">
+                                <div class="format-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="format-text">
+                                    <h4>Video Download</h4>
+                                    <p>HD MP4 without watermark</p>
+                                </div>
+                            </label>
+                            
+                            <label class="format-option audio" data-format="mp3" data-type="audio">
+                                <div class="format-icon">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <div class="format-text">
+                                    <h4>Audio Extract</h4>
+                                    <p>MP3 from video</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Button -->
+                    <div class="action-section">
+                        <button id="downloadBtn" class="btn-download-action" disabled>
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <p class="action-hint">Select format and click Download</p>
                     </div>
                     
                     <!-- Quick Test Links -->
                     <div class="quick-test">
-                        <p><i class="fas fa-vial"></i> Quick Test (Click to try):</p>
+                        <p><i class="fas fa-vial"></i> Quick Test Links:</p>
                         <div class="test-buttons">
-                            <button class="test-btn" data-url="https://www.tiktok.com/@tiktok/video/7324356767578967302">Test 1</button>
-                            <button class="test-btn" data-url="https://vm.tiktok.com/ZMJwCr5gT/">Test 2</button>
-                            <button class="test-btn" data-url="https://www.tiktok.com/@example/video/1234567890123456789">Test 3</button>
+                            <button class="test-btn video-test" data-url="https://www.tiktok.com/@tiktok/video/7324356767578967302">
+                                <i class="fas fa-video"></i> Video Test 1
+                            </button>
+                            <button class="test-btn video-test" data-url="https://www.tiktok.com/@bts_official_bighit/video/7384560123456789012">
+                                <i class="fas fa-video"></i> Video Test 2
+                            </button>
+                            <button class="test-btn audio-test" data-url="https://www.tiktok.com/@music/video/1234567890">
+                                <i class="fas fa-music"></i> Audio Test
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -66,15 +120,15 @@
                     <div class="steps">
                         <div class="step">
                             <div class="step-number">1</div>
-                            <p>Open TikTok app and tap "Share" on any video</p>
+                            <p>Copy TikTok link from Share option</p>
                         </div>
                         <div class="step">
                             <div class="step-number">2</div>
-                            <p>Select "Copy Link" option</p>
+                            <p>Paste link above and click Analyze</p>
                         </div>
                         <div class="step">
                             <div class="step-number">3</div>
-                            <p>Paste the link above and download</p>
+                            <p>Select Video or Audio and Download</p>
                         </div>
                     </div>
                 </div>
@@ -82,36 +136,56 @@
         </div>
     </section>
 
-    <!-- Video Preview Area -->
+    <!-- Preview Area -->
     <section class="preview-section">
         <div class="container">
             <div id="previewArea" class="preview-area hidden">
-                <h3><i class="fas fa-film"></i> Video Preview</h3>
-                <div class="video-info">
-                    <div class="thumbnail-container">
-                        <img id="thumbnail" src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?w=400&h=225&fit=crop&auto=format" alt="Thumbnail">
-                        <div class="play-overlay">
-                            <i class="fas fa-play-circle"></i>
+                <h3><i class="fas fa-eye"></i> Preview</h3>
+                <div class="preview-content">
+                    <div class="media-preview">
+                        <img id="thumbnail" src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?w=400&h=225&fit=crop&auto=format" alt="Preview">
+                        <div class="media-type-badge" id="mediaTypeBadge">
+                            <i class="fas fa-video"></i> Video
                         </div>
                     </div>
-                    <div class="info-details">
-                        <h4 id="videoTitle">Your TikTok Video</h4>
+                    <div class="preview-details">
+                        <h4 id="mediaTitle">TikTok Video</h4>
                         <div class="meta-info">
                             <span><i class="fas fa-user"></i> <span id="author">@username</span></span>
                             <span><i class="fas fa-clock"></i> <span id="duration">0:00</span></span>
                             <span><i class="fas fa-heart"></i> <span id="likes">0</span></span>
                         </div>
-                        <div class="download-buttons">
-                            <button id="downloadMP4" class="btn-download mp4">
-                                <i class="fas fa-video"></i> Download MP4 (HD)
-                            </button>
-                            <button id="downloadMP3" class="btn-download mp3">
-                                <i class="fas fa-music"></i> Download MP3
-                            </button>
+                        
+                        <!-- Download Options -->
+                        <div class="download-options">
+                            <div class="option-group">
+                                <h5><i class="fas fa-video"></i> Video Options</h5>
+                                <div class="option-buttons">
+                                    <button class="option-btn video-option" data-quality="hd">
+                                        <i class="fas fa-hd"></i> HD (1080p)
+                                    </button>
+                                    <button class="option-btn video-option" data-quality="sd">
+                                        <i class="fas fa-video"></i> SD (720p)
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="option-group">
+                                <h5><i class="fas fa-music"></i> Audio Options</h5>
+                                <div class="option-buttons">
+                                    <button class="option-btn audio-option" data-quality="high">
+                                        <i class="fas fa-volume-up"></i> High Quality
+                                    </button>
+                                    <button class="option-btn audio-option" data-quality="normal">
+                                        <i class="fas fa-music"></i> Normal
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <p class="download-hint">
-                            <i class="fas fa-lightbulb"></i> If download doesn't start, right-click and choose "Save Link As"
-                        </p>
+                        
+                        <div class="download-instruction">
+                            <p><i class="fas fa-lightbulb"></i> Click any option above to start download</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,53 +195,58 @@
     <!-- Features -->
     <section class="features">
         <div class="container">
-            <h2><i class="fas fa-star"></i> Why Use Our Downloader?</h2>
+            <h2><i class="fas fa-star"></i> Why Choose TikTok Downloader X40?</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-infinity"></i>
+                        <i class="fas fa-video"></i>
                     </div>
-                    <h3>Unlimited Downloads</h3>
-                    <p>Download as many videos as you want. No limits, no restrictions!</p>
+                    <h3>Video Download</h3>
+                    <p>Download TikTok videos in HD quality without watermark. Multiple resolutions available.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-ad"></i>
+                        <i class="fas fa-music"></i>
                     </div>
-                    <h3>100% Ad-Free</h3>
-                    <p>No pop-ups, no banners, no annoying ads. Just download!</p>
+                    <h3>Audio Extract</h3>
+                    <p>Extract audio from TikTok videos as MP3. Save background music and sounds.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Super Fast</h3>
-                    <p>HD video downloads in seconds. No waiting!</p>
+                    <h3>Fast Processing</h3>
+                    <p>Instant processing. No waiting time. Download starts immediately.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Safe & Private</h3>
-                    <p>Your data is secure. We don't collect or store any information.</p>
+                    <h3>Safe & Secure</h3>
+                    <p>We don't store or collect any personal data. Your privacy is protected.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Alternative Download Methods -->
-    <section class="alternatives">
+    <!-- Supported Formats -->
+    <section class="formats">
         <div class="container">
-            <h2><i class="fas fa-backup"></i> Alternative Download Options</h2>
-            <div class="alt-methods">
-                <div class="alt-card">
-                    <h3><i class="fas fa-external-link-alt"></i> Direct Downloaders</h3>
-                    <p>If the above method doesn't work, click these buttons:</p>
-                    <div class="alt-buttons">
-                        <button class="alt-btn" id="alt1">SnapTik.app</button>
-                        <button class="alt-btn" id="alt2">SSSTik.io</button>
-                        <button class="alt-btn" id="alt3">TikDown.org</button>
+            <h2><i class="fas fa-file-alt"></i> Supported Formats</h2>
+            <div class="format-list">
+                <div class="format-item">
+                    <div class="format-icon-large">
+                        <i class="fas fa-file-video"></i>
                     </div>
+                    <h3>MP4 Video</h3>
+                    <p>HD 1080p, 720p without watermark</p>
+                </div>
+                <div class="format-item">
+                    <div class="format-icon-large">
+                        <i class="fas fa-file-audio"></i>
+                    </div>
+                    <h3>MP3 Audio</h3>
+                    <p>320kbps high quality audio</p>
                 </div>
             </div>
         </div>
@@ -180,11 +259,20 @@
             <div class="faq-list">
                 <div class="faq-item active">
                     <div class="faq-question">
-                        <span>Is there any download limit?</span>
+                        <span>Can I extract audio from TikTok videos?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p><strong>No!</strong> Our service has no download limits. You can download 100+ videos daily, completely free.</p>
+                        <p><strong>Yes!</strong> TikTok Downloader X40 allows you to extract audio from any TikTok video and save it as MP3. Perfect for saving music, sounds, and background audio.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there any watermark on downloaded videos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No watermark!</strong> All videos download completely clean without any TikTok logo, username, or watermark. You get the original video without any branding.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -193,26 +281,82 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We provide maximum quality (HD 720p/1080p). Videos download in original size without compression.</p>
+                        <p>We provide the maximum available quality for each video. Most videos download in HD 720p or 1080p without compression. The quality depends on the original TikTok video.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Is it safe to use?</span>
+                        <span>Is it completely free to use?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, completely safe. We don't collect data, no malware. Everything works in your browser.</p>
+                        <p><strong>100% Free Forever!</strong> No hidden charges, no registration required, no premium plans. TikTok Downloader X40 offers unlimited downloads completely free.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Does it work on mobile?</span>
+                        <span>Does it work on mobile devices?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! Works on iOS (iPhone) and Android devices. Just open browser and paste the link.</p>
+                        <p><strong>Yes!</strong> Our downloader works perfectly on all devices - iPhone, Android phones, tablets, and desktop computers. Just open in your browser and download.</p>
                     </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How many videos can I download?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Unlimited downloads!</strong> There are no daily limits or restrictions. You can download as many videos and audio files as you want, whenever you want.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my data safe with TikTok Downloader X40?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Completely safe!</strong> We don't store, collect, or share any personal data. All processing happens in your browser. No login required, no data tracking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if the download doesn't work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you encounter any issues, try our alternative download buttons or contact our support team. Most issues are resolved by trying a different video link or refreshing the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <h2><i class="fas fa-headset"></i> Support & Community</h2>
+            <div class="support-content">
+                <div class="support-card discord-card">
+                    <div class="support-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Join Discord</h3>
+                    <p>Get help, report issues, suggest features</p>
+                    <a href="https://discord.gg/8UvY4sC3e" target="_blank" class="support-btn discord-btn">
+                        <i class="fab fa-discord"></i> Join Community
+                    </a>
+                </div>
+                <div class="support-card email-card">
+                    <div class="support-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Contact us for any assistance</p>
+                    <a href="mailto:md6779304@gmail.com" class="support-btn email-btn">
+                        <i class="fas fa-paper-plane"></i> Email Us
+                    </a>
                 </div>
             </div>
         </div>
@@ -224,50 +368,49 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <i class="fab fa-tiktok"></i>
-                    <h3>TikTok Downloader</h3>
-                    <p>The easiest and fastest TikTok downloader</p>
+                    <h3>TikTok Downloader X40</h3>
+                    <p>Download Videos & Audio Without Watermark</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="#"><i class="fas fa-download"></i> Download</a>
                     <a href="#features"><i class="fas fa-star"></i> Features</a>
+                    <a href="#formats"><i class="fas fa-file-alt"></i> Formats</a>
                     <a href="#faq"><i class="fas fa-question"></i> FAQ</a>
                 </div>
                 <div class="footer-disclaimer">
-                    <p><strong><i class="fas fa-exclamation-triangle"></i> Note:</strong> This tool is for <strong>personal use only</strong>. Do not redistribute downloaded content or use for commercial purposes. We are not affiliated with TikTok.</p>
-                    <p class="copyright">© 2024 TikTok Downloader. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff0050;"></i> for users worldwide.</p>
+                    <p><strong><i class="fas fa-exclamation-triangle"></i> Disclaimer:</strong> This tool is for <strong>personal use only</strong>. Respect content creators' rights. We are not affiliated with TikTok.</p>
+                    <p class="copyright">© 2025 TikTok Downloader X40. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Loading Modal -->
+    <!-- Modals -->
     <div id="loadingModal" class="modal hidden">
         <div class="modal-content">
             <div class="loading-spinner"></div>
-            <h3>Preparing Download...</h3>
-            <p id="loadingText">Please wait, processing your video</p>
+            <h3 id="loadingTitle">Processing...</h3>
+            <p id="loadingText">Please wait while we process your request</p>
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
         </div>
     </div>
 
-    <!-- Download Ready Modal -->
     <div id="downloadModal" class="modal hidden">
         <div class="modal-content download-ready">
             <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
             <h3>Download Ready!</h3>
-            <p id="downloadMessage">Your file download will start automatically. If it doesn't:</p>
+            <p id="downloadMessage">Your file is ready to download</p>
             <div class="download-instructions">
-                <p><i class="fas fa-mouse-pointer"></i> <strong>Right-click</strong> on the download button</p>
-                <p><i class="fas fa-save"></i> Select "<strong>Save Link As</strong>"</p>
-                <p><i class="fas fa-folder"></i> Choose where to save the file</p>
+                <p><i class="fas fa-mouse-pointer"></i> Click the button below to download</p>
+                <p><i class="fas fa-info-circle"></i> If download doesn't start, right-click and "Save Link As"</p>
             </div>
             <div class="modal-buttons">
                 <button id="directDownload" class="btn-primary">
-                    <i class="fas fa-download"></i> Direct Download
+                    <i class="fas fa-download"></i> Download Now
                 </button>
                 <button id="closeModal" class="btn-secondary">
                     <i class="fas fa-times"></i> Close
@@ -275,6 +418,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
 
     <script src="script.js"></script>
 </body>
